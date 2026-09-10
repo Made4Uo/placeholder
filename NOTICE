@@ -1,0 +1,61 @@
+placeholder
+Copyright (c) 2026 Made4Uo LLC
+Licensed under the MIT License. See LICENSE.
+
+This project bundles and depends on third-party components. They keep their own
+licences, which are reproduced or linked below.
+
+--------------------------------------------------------------------------------
+BUNDLED IN THIS REPOSITORY
+
+Fourteen font families
+  assets/fonts/*.ttf
+
+  Inter, Lato, Montserrat, Noto Sans, Open Sans, Oswald, Poppins, PT Sans,
+  Raleway, Source Sans 3, Lora, Playfair Display and JetBrains Mono are each
+  under the SIL Open Font License, Version 1.1. Roboto is under the Apache
+  License 2.0. Every copyright line, and the full OFL text, is reproduced in
+  assets/fonts/OFL.txt, which scripts/build-fonts.mjs regenerates from the
+  upstream packages. That script REFUSES TO BUILD if a package ships no licence
+  file, so a font can never end up here without its notice.
+
+  Shipped in the repository rather than fetched at runtime because the rendering
+  service has no system fonts, so PNG and WebP output would have nothing to draw
+  text with. These are SUBSET to the Latin ranges by the same script, which
+  OFL-1.1 permits as a Modified Version; the files keep their original family
+  names because subsetting removes glyphs without redesigning any. None of them
+  is sold on its own.
+
+Lucide
+  src/icons.generated.ts
+  Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as part
+  of Feather (MIT). All other copyright (c) for Lucide are held by Lucide
+  Contributors 2022.
+  ISC License. https://github.com/lucide-icons/lucide/blob/main/LICENSE
+
+  The generated file holds the inner geometry of each icon, extracted from the
+  lucide-static package by scripts/build-icons.mjs. lucide-static itself is a
+  devDependency and is not part of the deployed service: the generated file is
+  committed so a fresh clone builds without it.
+
+--------------------------------------------------------------------------------
+NPM DEPENDENCIES, BUNDLED INTO THE DEPLOYED SERVICE
+
+@resvg/resvg-wasm
+  https://github.com/thx/resvg-js
+  Mozilla Public License 2.0.
+  Used unmodified, as a published package. MPL-2.0 is file-level copyleft, so
+  using it as a library places no licence obligation on this project's own
+  source.
+
+@jsquash/webp
+  https://github.com/jamsinclair/jSquash
+  Apache License 2.0, derived from Google's Squoosh.
+  The bundled libwebp codec carries its own BSD-style licence, reproduced at
+  node_modules/@jsquash/webp/codec/LICENSE.codec.md
+
+--------------------------------------------------------------------------------
+Development dependencies (wrangler, typescript, vitest, lucide-static and the
+@expo-google-fonts packages) are not part of the deployed service. The last two
+are covered above anyway, because their output is committed into this
+repository.

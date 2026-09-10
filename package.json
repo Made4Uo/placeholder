@@ -1,0 +1,41 @@
+{
+  "name": "placeholder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A tiny placeholder-image service. SVG first, with radius, borders, opacity, blur, aspect ratios and wireframe templates.",
+  "license": "MIT",
+  "scripts": {
+    "build:icons": "node scripts/build-icons.mjs",
+    "build:fonts": "node scripts/build-fonts.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test.watch": "vitest"
+  },
+  "dependencies": {
+    "@jsquash/webp": "^1.5.0",
+    "@resvg/resvg-wasm": "^2.6.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260726.1",
+    "@expo-google-fonts/inter": "^0.4.2",
+    "@expo-google-fonts/jetbrains-mono": "^0.4.1",
+    "@expo-google-fonts/lato": "^0.4.1",
+    "@expo-google-fonts/lora": "^0.4.2",
+    "@expo-google-fonts/montserrat": "^0.4.2",
+    "@expo-google-fonts/noto-sans": "^0.4.2",
+    "@expo-google-fonts/open-sans": "^0.4.2",
+    "@expo-google-fonts/oswald": "^0.4.2",
+    "@expo-google-fonts/playfair-display": "^0.4.2",
+    "@expo-google-fonts/poppins": "^0.4.1",
+    "@expo-google-fonts/pt-sans": "^0.4.1",
+    "@expo-google-fonts/raleway": "^0.4.2",
+    "@expo-google-fonts/roboto": "^0.4.3",
+    "@expo-google-fonts/source-sans-3": "^0.4.1",
+    "@expo-google-fonts/source-serif-4": "^0.4.1",
+    "lucide-static": "^1.43.0",
+    "typescript": "^5.6.0",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.131.0"
+  }
+}
